@@ -1,0 +1,46 @@
+// Default variables.
+//@import "default-variables";
+
+// Bootstrap Framework.
+//@import '../bootstrap/assets/stylesheets/bootstrap';
+
+// Base-theme overrides.
+//@import 'overrides';
+
+body {
+  font-size: 16px;
+}
+
+.main-content {
+  font-size: 1.2em;
+}
+
+.bef-exposed-form .form--inline > .form-item {
+  float: none;
+}
+
+.filter-categories {
+  summary {
+    display: inline-block;
+    margin: 8px 0;
+    background: #ccc;
+    padding: 4px 12px 5px 12px;
+    font-size: 1.3em;
+  }
+  .form-inline .radio, .form-inline .checkbox {
+    display: block;
+  }
+
+  button.form-submit {
+    margin-top: 30px;
+  }
+}
+
+.view-resource-search {
+  h3 {
+    font-size: 2.0em;
+  }
+  .views-row {
+    margin-bottom: 25px;
+  }
+}
