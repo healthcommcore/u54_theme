@@ -7,8 +7,27 @@
 // Base-theme overrides.
 //@import 'overrides';
 
+// Colors
+
+$lt-green: #A5C974;
+$yellow: #F0D167;
+$lt-blue: #E1F4FA;
+
 body {
   font-size: 16px;
+  background: $lt-blue;
+}
+
+.banner {
+  background: $lt-green;
+}
+
+.navbar-color {
+  background: $yellow;
+}
+
+.main-bkgrd {
+  background: #fff;
 }
 
 .main-content {
