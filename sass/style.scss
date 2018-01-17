@@ -9,13 +9,13 @@
 
 // Colors
 
-$lt-green: #A5C974;
-$yellow: #F0D167;
-$lt-blue: #E1F4FA;
+@import 'variables';
 
 body {
   font-size: 16px;
   background: $lt-blue;
+  font-family: $nudista;
+  font-weight: $navlink-inactive-font-weight;
 }
 
 .banner {
@@ -23,7 +23,40 @@ body {
 }
 
 .navbar-color {
+  background: #fff;
+}
+
+.navbar-size {
+  height: 67px;
+}
+
+.navbar-stripe {
   background: $yellow;
+  width: 100%;
+  height: 18px;
+  margin-top: 22px;
+}
+
+.navbar {
+  border: none;
+  position: relative;
+  margin-top: -16px;
+}
+
+.navbar-default {
+  border: none;
+  background: #fff;
+}
+.navbar-nav > li > a {
+  text-transform: uppercase;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $dk-blue;
+}
+
+.navbar-default .navbar-nav > li > a:hover, 
+.navbar-default .navbar-nav > li > a:focus {
 }
 
 .main-bkgrd {
@@ -66,4 +99,8 @@ body {
 
 .views-row {
   margin-bottom: 20px;
+}
+
+.absolute {
+  position: absolute;
 }

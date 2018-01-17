@@ -1,0 +1,1 @@
+{"version":3,"sources":["variables.scss"],"names":[],"mappings":"AAWA,SAAS","file":"variables.css","sourcesContent":["\n// Colors\n$lt-green: #A5C974;\n$yellow: #F0D167;\n$dk-blue: #144F88;\n$lt-blue: #E1F4FA;\n\n// Fonts\n\n$nudista: \"nudista-web\";\n\n/* Nav */\n$navlink-inactive-font-weight: 400;\n$navlink-active-font-weight: 600;\n//$navlink-link-color: #fff;\n\n"]}
