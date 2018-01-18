@@ -71,5 +71,14 @@
     {{ page }}
     {{ page_bottom }}
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+    <script>
+      ( function($) {
+        $(document).ready( function() {
+          $('.nolink').on('click', function (e) {
+            e.preventDefault();
+          });
+        });
+      })(jQuery);
+    </script>
   </body>
 </html>
