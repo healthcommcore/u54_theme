@@ -14,8 +14,8 @@
 body {
   font-size: 16px;
   background: $lt-blue;
-  font-family: $nudista;
-  font-weight: $navlink-inactive-font-weight;
+  font-family: $open-sans;
+  font-weight: $reg;
 }
 
 .banner {
@@ -68,12 +68,105 @@ body {
 .navbar-default .navbar-nav > li > a:focus {
 }
 
+.region-sidebar-first {
+  padding-right: 20px;
+}
+
 .main-bkgrd {
   background: #fff;
 }
 
+.main-container {
+  padding-top: 30px;
+}
+
 .main-content {
   font-size: 1.2em;
+  padding-left: 50px;
+}
+
+a, strong {
+  font-style: normal;
+}
+
+a {
+  font-weight: $semi;
+}
+
+strong {
+  font-weight: $bold;
+}
+
+h1, h2, h3, h4,
+h1.page-header,
+.view-resource-search h3 {
+  font-family: $nudista;
+}
+
+h1.page-header {
+  font-size: 3.5em;
+  font-weight: $lt;
+  color: $dk-blue;
+  border-bottom: $dk-blue 1px solid;
+  line-height: 1.0em;
+  padding-bottom: 3px;
+  margin-bottom: 50px;
+}
+
+h2,
+.view-steps h3,
+.view-resource-search h3 {
+  font-weight: $semi;
+  font-size: 1.7em;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: $green;
+}
+
+.btn {
+  padding: 9px 18px;
+  font-size: 0.9em;
+  font-weight: $bold;
+}
+  
+.btn-primary {
+  color: $dk-blue;
+  background: $btn-blue;
+  border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  color: #fff;
+  background: $btn-blue-act;
+}
+
+.filter-categories {
+  legend {
+    font-family: $nudista;
+    font-weight: $med;
+    font-size: 1.4em;
+    color: $accent;
+    border-color: $accent;
+    margin-bottom: 7px;
+  }
+  .form-checkboxes {
+    margin-bottom: 20px;
+    ul {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+      ul {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+.views-field-field-detail {
+  .btn {
+    margin-top: 10px;
+  }
 }
 
 .bef-exposed-form .form--inline > .form-item {
@@ -95,14 +188,14 @@ body {
   button.form-submit {
     margin-top: 30px;
   }
+  .form-checkboxes {
+    font-size: 1.05em;
+  }
 }
 
 .view-resource-search {
-  h3 {
-    font-size: 2.0em;
-  }
   .views-row {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 }
 
