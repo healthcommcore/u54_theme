@@ -58,15 +58,48 @@ body {
 }
 .navbar-nav > li > a {
   text-transform: uppercase;
+  border-bottom: #fff 1px solid;
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: $dk-blue;
 }
 
 .navbar-default .navbar-nav > li > a:hover, 
 .navbar-default .navbar-nav > li > a:focus {
 }
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li.active > a:hover,
+.navbar-default .navbar-nav > li.active > a:focus,
+.navbar-default .navbar-nav > li > a:focus {
+  color: $navlink-link-color;
+  background: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+  padding-bottom: 8px;
+}
+
+
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li > a.is-active {
+  //font-family: $navlink-active-font;
+  //border-top: #fff 11px solid;
+  //border-bottom: $orange 4px solid;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a.active,
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li > a.is-active,
+.navbar-default .navbar-nav > li.active-trail a.active-trail,
+.navbar-default .navbar-nav > li > a:focus {
+  //border-top: #fff 11px solid;
+  border-color: $dk-blue;
+}
+
 
 .region-sidebar-first {
   padding-right: 20px;
@@ -129,17 +162,32 @@ h2,
   font-weight: $bold;
 }
   
+.btn-info,
 .btn-primary {
   color: $dk-blue;
-  background: $btn-blue;
+  background: $btn-lt-blue;
   border: none;
 }
 
 .btn-primary:hover,
 .btn-primary:focus {
   color: #fff;
-  background: $btn-blue-act;
+  background: $btn-lt-blue-act;
 }
+
+.btn-default {
+  color: $dk-blue;
+  background: #fff;
+  border: $btn-med-blue 1px solid;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+  color: $btn-med-blue;
+  background: #fff;
+  border-color: $dk-blue;
+}
+
 
 .filter-categories {
   legend {
@@ -160,6 +208,18 @@ h2,
         margin-left: 30px;
       }
     }
+  }
+  .form-inline .radio,
+  .form-inline .checkbox {
+    label {
+      margin-bottom: 5px;
+    }
+  }
+  .form-inline .radio input[type="radio"], 
+  .form-inline .checkbox input[type="checkbox"] {
+    display: block;
+    float: left;
+    margin: 5px 5px 0 0;
   }
 }
 

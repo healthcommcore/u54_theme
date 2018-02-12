@@ -4,8 +4,9 @@ $lt-green: #A5C974;
 $green: #6F894A;
 $yellow: #F0D167;
 $dk-blue: #144F88;
-$btn-blue: #C6EAF7;
-$btn-blue-act: #66BCDD;
+$btn-lt-blue: #C6EAF7;
+$btn-lt-blue-act: #66BCDD;
+$btn-med-blue: #66BCDD;
 $lt-blue: #E1F4FA;
 $accent: #C6755D;
 
@@ -20,9 +21,9 @@ $semi: 600;
 $bold: 700;
 
 /* Nav */
+$navlink-link-color: $dk-blue;
 $navlink-inactive-font-weight: 400;
 $navlink-active-font-weight: 600;
-//$navlink-link-color: #fff;
 
 
 
