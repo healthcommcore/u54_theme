@@ -183,6 +183,7 @@ body {
 .main-content {
   font-size: 1.2em;
   padding-left: 50px;
+  padding-bottom: 100px;
 }
 
 a, strong {
@@ -255,6 +256,10 @@ h2,
   border-color: $dk-blue;
 }
 
+.alert-warning {
+  border-color: $yellow;
+  margin: 30px 0;
+}
 
 .filter-categories {
   legend {
@@ -288,6 +293,9 @@ h2,
     float: left;
     margin: 5px 5px 0 0;
   }
+  button.form-submit {
+    margin-top: 20px;
+  }
 }
 
 .views-field-field-detail {
@@ -310,10 +318,6 @@ h2,
   }
   .form-inline .radio, .form-inline .checkbox {
     display: block;
-  }
-
-  button.form-submit {
-    margin-top: 30px;
   }
   .form-checkboxes {
     font-size: 1.05em;
