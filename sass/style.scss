@@ -154,20 +154,19 @@ body {
 }
 
 .submenu {
-  .navbar-nav > li {
+  .nav > li {
     float: none;
   }
-  .navbar-nav > li > a {
+  .nav > li > a {
     text-transform: capitalize;
     color: $accent;
     font-size: 1.4em;
     font-weight: $med;
   }
-  .navbar-nav > li > a:hover,
-  .navbar-nav > li > a:focus {
+  .nav > li > a:hover,
+  .nav > li > a:focus,
+  .nav > li > a.is-active {
     background: none;
-  }
-  .navbar-nav > li > a.is-active {
     font-weight: $semi;
   }
 }
@@ -196,6 +195,12 @@ a {
 
 strong {
   font-weight: $bold;
+}
+
+hr {
+  margin-bottom: 0;
+  background: #ccc;
+  height: 1px;
 }
 
 h1, h2, h3, h4,
@@ -304,6 +309,12 @@ h2,
   }
 }
 
+.view-header {
+  article {
+    margin-bottom: 40px;
+  }
+}
+
 .bef-exposed-form .form--inline > .form-item {
   float: none;
 }
@@ -321,6 +332,42 @@ h2,
   }
   .form-checkboxes {
     font-size: 1.05em;
+  }
+}
+
+.filter-explanation {
+  padding: 10px 40px;
+  background: $lter-blue;
+  margin-bottom: 20px;
+  p {
+    margin-bottom: 40px;
+  }
+  p.reduced-margin {
+    margin-bottom: 8px;
+  }
+}
+
+.view-resource-search .filter-explanation h3, 
+.view-steps .filter-explanation h3 {
+  text-transform: capitalize;
+  color: #000;
+  font-size: 1.23em;
+  font-weight: normal;
+  margin: 30px 0 20px;
+}
+
+.view-steps {
+  .btn-group {
+    margin-bottom: 20px;
+  }
+  .categories-list {
+    margin-bottom: 40px;
+  }
+}
+
+.view-resource-search {
+  .alert-warning {
+    margin-bottom: 40px;
   }
 }
 
@@ -342,6 +389,18 @@ h2,
   margin-bottom: 20px;
 }
 
+.first-line {
+  color: $green;
+  font-family: $nudista;
+  font-size: 1.3em;
+  line-height: 1.4em;
+  margin-bottom: 16px;
+}
+
 .absolute {
   position: absolute;
+}
+
+.topspace {
+  margin-top: 10px;
 }
