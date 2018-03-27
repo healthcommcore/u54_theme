@@ -89,12 +89,14 @@
           // upon filter form submission, determine if any checkboxes are checked
           // and show/hide the corresponding results warning text box
           if ( !isEmpty(checkboxes) ) {
-            $('#all-results').removeClass('show').addClass('hidden');
+            $('#filter-explanation').removeClass('show').addClass('hidden');
             $('#search-results').removeClass('hidden').addClass('show');
+            $('.view-content').show();
           }
           else {
-            $('#all-results').removeClass('hidden').addClass('show');
+            $('#filter-explanation').removeClass('hidden').addClass('show');
             $('#search-results').removeClass('show').addClass('hidden');
+            $('.view-content').hide();
           }
 
           // Check to make sure at least one of the filter category checkboxes were
