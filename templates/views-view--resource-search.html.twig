@@ -10,6 +10,7 @@
  * - header: The optional header.
  * - footer: The optional footer.
  * - rows: The results of the view query, if any.
+ * - filter_terms: All terms selected from Exposed Filters
  * - empty: The content to display if there are no rows.
  * - pager: The optional pager next/prev links to display.
  * - exposed: Exposed widget form/info to display.
@@ -51,6 +52,11 @@
   {% if header %}
     <div class="view-header">
       {{ header }}
+    </div>
+  {% endif %}
+  {% if total_results and filter_terms %}
+    <div class="results-header">
+      <p>Your search for <strong>{{ filter_terms }}</strong> found <strong>{{ total_results }}</strong> results</p>
     </div>
   {% endif %}
   {% if exposed %}

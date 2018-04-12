@@ -24,6 +24,16 @@ function u54_theme_preprocess_node__resource(&$vars) {
  */
 function u54_theme_preprocess_views_view(&$vars) {
   $view = $vars["view"];
+  $vars["total_results"] = getTotalResults($view);
+  $vars["filter_terms"] = getFilterTerms($view);
+}
+
+
+function getTotalResults($view) {
+  return $view->total_rows;
+}
+
+function getFilterTerms($view) {
   $term_arr = [];
   $inputs = $view->getExposedInput();
   if ( $inputs === null || count($inputs) == 0 ) {
@@ -42,7 +52,7 @@ function u54_theme_preprocess_views_view(&$vars) {
     $term_arr[$last] = $end;
   }
   $terms = implode(", ", $term_arr);
-  $vars["filter_terms"] = $terms;
+  return $terms;
 }
 
 /**
