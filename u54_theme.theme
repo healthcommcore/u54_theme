@@ -5,3 +5,56 @@
  *
  * Place your custom PHP code in this file.
  */
+
+/**
+ * Implements hook_preprocess_node__TYPE()
+ *
+ * Just a simple preprocessor to include a resource url
+ * variable for use inside the node--resource.html.twig
+ * template. Needed this to force the url field to be
+ * structured as a link
+ */
+function u54_theme_preprocess_node__resource(&$vars) {
+  $vars["resource_url"] = $vars["node"]->get("field_url")->value; 
+}
+
+/**
+ * Implements hook_preprocess_views_view()
+ *
+ */
+function u54_theme_preprocess_views_view(&$vars) {
+  $view = $vars["view"];
+  $term_arr = [];
+  $inputs = $view->getExposedInput();
+  if ( $inputs === null || count($inputs) == 0 ) {
+    return;
+  }
+  foreach ($inputs as $key => $input) {
+    foreach ($input as $tid) {
+      $term = Drupal\taxonomy\Entity\Term::load($tid);
+      $name = $term->getName();
+      $term_arr[] = $name;
+    }
+  }
+  if ( count($term_arr) > 1) {
+    $last = count($term_arr) - 1;
+    $end = "and " . $term_arr[$last];
+    $term_arr[$last] = $end;
+  }
+  $terms = implode(", ", $term_arr);
+  $vars["filter_terms"] = $terms;
+}
+
+/**
+ * Implements hook_preprocess_views_view_unformatted()
+ *
+ * Used to grab the grouping title for views using the 
+ * unformatted option and grouped by taxonomy terms
+ */
+
+function u54_theme_preprocess_views_view_unformatted(&$view) {
+  $raw_title = $view["title"];
+  $title = explode("\n", $raw_title);
+  $title = strtolower( str_replace(" ", "-", $title[5]) );
+  $view["category_id"] = $title;
+}
