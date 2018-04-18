@@ -14,6 +14,7 @@ regions:
   navigation: 'Navigation'
   navigation_collapsible: 'Navigation (Collapsible)'
   header: 'Top Bar'
+  hero: 'Hero'
   highlighted: 'Highlighted'
   help: 'Help'
   content: 'Content'
@@ -25,4 +26,5 @@ regions:
 
 libraries:
   - 'u54_theme/global-styling'
+  - 'u54_theme/global-scripts'
   - 'u54_theme/bootstrap-scripts'

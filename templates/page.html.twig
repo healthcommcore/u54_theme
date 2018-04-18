@@ -113,7 +113,34 @@
   {% endblock %}
 {% endif %}
 
+{# Hero #}
+{% if page.hero %}
+  <div class="hero">
+    <div class="container">
+      {{ page.hero }}
+    </div>
+  </div>
+{% endif %}
+
 {# Main #}
+
+{# Modal alert #}
+<div class="modal fade" id="alert-modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+        <h4 class="modal-title">Search error</h4>
+      </div>
+      <div class="modal-body">
+        <p>You must select at least one category in the search categories to perform a search</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>
 {% block main %}
   <div class="main-bkgrd">
     <div role="main" class="main-container {{ container }} js-quickedit-main-content">

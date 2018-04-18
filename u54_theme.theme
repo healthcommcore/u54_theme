@@ -7,6 +7,16 @@
  */
 
 /**
+ * Implements hook_preprocess_page()
+ */
+function u54_theme_preprocess_page(&$vars) {
+  $vars["#attached"]["library"][] = "u54_theme/u54_theme";
+  if (\Drupal::service('path.matcher')->isFrontPage()) {
+    $vars["#attached"]["library"][] = "u54_theme/hero-blur";
+  }
+}
+
+/**
  * Implements hook_preprocess_node__TYPE()
  *
  * Just a simple preprocessor to include a resource url

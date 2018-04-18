@@ -2,7 +2,16 @@ global-styling:
   css:
     theme:
       css/style.css: {}
+global-scripts:
+  header: true
+  js:
+    js/u54_theme.js: {}
+  dependencies:
+    - core/jquery
 
+hero-blur:
+  js:
+    js/background-blur.min.js: {}
 bootstrap-scripts:
   js:
     bootstrap/assets/javascripts/bootstrap/affix.js: {}
