@@ -13,13 +13,15 @@
 
 body {
   font-size: 16px;
-  background: $lt-blue;
+  background: #FFF7D6;
   font-family: $open-sans;
   font-weight: $reg;
+  margin-top: 0;
 }
 
 .banner {
   background: $lt-green;
+  border-top: $banner-lt-blue 14px solid;
 }
 
 .logo {
@@ -52,7 +54,7 @@ body {
 }
 
 .navbar-size {
-  height: 67px;
+  height: 90px;
 }
 
 .navbar-stripe {
@@ -149,16 +151,25 @@ body {
 
 }
 
+.hero {
+  background: #fff;
+}
+
 .home-hero-container {
+  position: relative;
+  margin-bottom: 40px;
   .buttons-container {
     background: rgba(20, 79, 136, 0.5);
     width: 386px;
-    height: 571px;
+    height: 516px;
+    z-index: 50;
   }
   .buttons-list {
     list-style: none;
     padding-left: 0;
-    margin: 50px 0 0 20px;
+    margin: 63px 0 0 40px;
+    position: relative;
+    display: block;
     li { 
       display: table;
       margin: 30px 0;
@@ -176,10 +187,16 @@ body {
     .home-btn {
       width: 300px;
       min-height: 71px;
+      font-size: 1.2em;
+      font-weight: $semi;
+      line-height: 1.2em;
+    }
+    .home-btn.one-line {
+      padding-top: 22px;
     }
     .hover-text-container {
       text-align: center;
-      margin-left: 25px;
+      margin-left: 44px;
       margin-top: -6px;
       .hover-rule {
         height: 1px;
@@ -190,11 +207,51 @@ body {
         top: 50%;
       }
       .hover-text-text {
+        font-size: 1.2em;
+        font-weight: $reg;
+        line-height: 1.2em;
+        color: $dk-blue;
         width: 414px;
-        background: rgba(240, 209, 103, 0.8);
-        padding: 20px;
+        background: rgba(240, 209, 103, 0.9);
+        padding: 18px 20px 20px 20px;
       }
     }
+    .hover-text-container.three-line {
+      margin-top: -19px;
+    }
+  }
+  .home-hero-title {
+    z-index: 100;
+    background: rgba(255, 239, 173, 0.9);
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    h1 {
+      color: $dk-blue;
+      padding: 14px 0 25px;
+    }
+  }
+  .home-hero-img-overlay {
+    z-index: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+  }
+}
+
+.home-header {
+  border-bottom: $dk-blue 1px solid;
+  display: block;
+  position: relative;
+  margin-bottom: 40px;
+  span {
+    margin-top: -16px;
+    font-size: 1.1em;
+    position: absolute;
+    background: #fff;
+    left: 205px;
+    padding: 0 25px;
   }
 }
 
@@ -457,4 +514,20 @@ h2,
 
 .topspace {
   margin-top: 10px;
+}
+
+.footer {
+  border: none;
+  .footer-logos {
+    text-align: center;
+    .pmc {
+      float: left;
+    }
+    .umb {
+      display: inline-block;
+    }
+    .dfhcc {
+      float: right;
+    }
+  }
 }

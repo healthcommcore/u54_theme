@@ -36,11 +36,14 @@
 
     });
 
-  /*
-    $('#home-hero-img').on('mouseover', function (e) {
-      console.log("hovered");
+    // Hero image fade when hero buttons are hovered over
+    $('.home-btn')
+      .on('mouseover', function (e) {
+        $('#home-hero-img-overlay').animate({ "opacity" : 0.6 }, 300);
+      })
+    .on('mouseout', function (e) {
+      $('#home-hero-img-overlay').animate({ "opacity" : 0 }, 300);
     });
-  */
 
 
 

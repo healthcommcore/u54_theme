@@ -16,6 +16,11 @@ function u54_theme_preprocess_page(&$vars) {
   }
 }
 
+function u54_theme_preprocess_page_title(&$vars) {
+  $is_front = \Drupal::service('path.matcher')->isFrontPage();
+  $vars["is_front"] = $is_front;
+}
+
 /**
  * Implements hook_preprocess_node__TYPE()
  *
