@@ -334,6 +334,10 @@ h2,
   color: $green;
 }
 
+a {
+  color: $dk-blue;
+}
+
 .btn {
   padding: 9px 18px;
   font-size: 0.9em;
@@ -517,17 +521,58 @@ h2,
 }
 
 .footer {
+  margin-top: 0;
+  padding: 50px 0 60px;
+  text-align: center;
   border: none;
-  .footer-logos {
-    text-align: center;
-    .pmc {
-      float: left;
-    }
-    .umb {
+}
+
+.footer-logos {
+  text-align: center;
+  margin-bottom: 90px;
+  .pmc {
+    float: left;
+  }
+  .umb {
+    display: inline-block;
+  }
+  .dfhcc {
+    float: right;
+  }
+}
+
+.footer-content {
+  color: $dk-blue;
+  margin-top: 40px;
+  font-family: $nudista;
+  a {
+    text-decoration: underline;
+    font-weight: $reg;
+  }
+  nav {
+    font-size: 0.9em;
+    margin-bottom: 22px;
+    ul {
       display: inline-block;
+      list-style: none;
+      li {
+        float: left;
+        border-left: $dk-blue 1px solid;
+        a {
+          padding: 0 10px;
+        }
+      }
+      li:first-child {
+        border: none;
+      }
     }
-    .dfhcc {
-      float: right;
+  }
+  .footer-text {
+    font-size: 0.8em;
+    p {
+      margin-bottom: 3px;
     }
   }
 }
+
+
