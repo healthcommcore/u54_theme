@@ -200,7 +200,7 @@ body {
       margin-top: -6px;
       .hover-rule {
         height: 1px;
-        background: $cream;
+        background: $yellow;
         width: 90px;
         position: absolute;
         right: 100%;
@@ -256,7 +256,6 @@ body {
 }
 
 .region-sidebar-first {
-  padding-right: 20px;
 }
 
 .submenu {
@@ -315,7 +314,7 @@ h1.page-header,
 }
 
 h1.page-header {
-  font-size: 3.5em;
+  font-size: 3.0em;
   font-weight: $lt;
   color: $dk-blue;
   border-bottom: $dk-blue 1px solid;
@@ -359,14 +358,14 @@ a {
 .btn-primary:active,
 .btn-primary.active,
 .btn-primary:focus {
-  color: $cream;
+  color: $yellow;
   background: $dk-blue;
 }
 
 .btn-default {
   color: $dk-blue;
   background: #fff;
-  border: $btn-med-blue 1px solid;
+  border: $dk-blue 1px solid;
 }
 
 .btn-default:hover,
@@ -382,6 +381,28 @@ a {
 }
 
 .filter-categories {
+  border-top: $yellow 14px solid;
+  details.form-item {
+    background: $lt-cream;
+    padding: 10px 20px 10px 20px;
+  }
+  details.form-item:first-child {
+    padding-top: 25px;
+  }
+  details.form-item:last-of-type {
+    padding-bottom: 40px;
+  }
+  summary {
+    display: block;
+    padding: 4px 12px 0 0;
+    font-size: 1.3em;
+    color: $dk-blue;
+    border-bottom: $dk-blue 1px solid;
+    margin-left: 20px;
+    .glyphicon {
+      margin-left: -20px;
+    }
+  }
   legend {
     font-family: $nudista;
     font-weight: $med;
@@ -391,30 +412,30 @@ a {
     margin-bottom: 7px;
   }
   .form-checkboxes {
-    margin-bottom: 20px;
+    font-size: 1.05em;
+    margin-top: 15px;
+    margin-left: 20px;
+    .radio, .checkbox {
+      display: block;
+      label {
+        margin: 3px 0;
+      }
+    }
     ul {
       list-style: none;
-      margin-left: 0;
       padding-left: 0;
       ul {
         margin-left: 30px;
       }
     }
   }
-  .form-inline .radio,
-  .form-inline .checkbox {
-    label {
-      margin-bottom: 5px;
-    }
-  }
-  .form-inline .radio input[type="radio"], 
-  .form-inline .checkbox input[type="checkbox"] {
+  .form-inline .form-group {
     display: block;
-    float: left;
-    margin: 5px 5px 0 0;
   }
+
   button.form-submit {
     margin-top: 20px;
+    width: 100%;
   }
 }
 
@@ -432,22 +453,6 @@ a {
 
 .bef-exposed-form .form--inline > .form-item {
   float: none;
-}
-
-.filter-categories {
-  summary {
-    display: inline-block;
-    margin: 8px 0;
-    background: #ccc;
-    padding: 4px 12px 5px 12px;
-    font-size: 1.3em;
-  }
-  .form-inline .radio, .form-inline .checkbox {
-    display: block;
-  }
-  .form-checkboxes {
-    font-size: 1.05em;
-  }
 }
 
 .filter-explanation {

@@ -41,8 +41,13 @@ function u54_theme_preprocess_views_view(&$vars) {
   $view = $vars["view"];
   $vars["total_results"] = getTotalResults($view);
   $vars["filter_terms"] = getFilterTerms($view);
+  $vars["total_resources"] = getTotalResources();
 }
 
+function getTotalResources() {
+  $total = db_query("SELECT count(n.nid) FROM {node} AS n, {node_field_data} AS nfd WHERE n.nid = nfd.nid AND n.type='resource' AND nfd.status=1")->fetchField();
+  return $total;
+}
 
 function getTotalResults($view) {
   return $view->total_rows;

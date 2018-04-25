@@ -11,6 +11,8 @@
  * - footer: The optional footer.
  * - rows: The results of the view query, if any.
  * - filter_terms: All terms selected from Exposed Filters
+ * - total_results: The total number of results from the query
+ * - total_resources: The total number of resources in the database
  * - empty: The content to display if there are no rows.
  * - pager: The optional pager next/prev links to display.
  * - exposed: Exposed widget form/info to display.
@@ -56,8 +58,17 @@
     </div>
   {% endif %}
   {% if total_results and filter_terms %}
-    <div class="results-header">
-      <p>Your search for <strong>{{ filter_terms }}</strong> found <strong>{{ total_results }}</strong> results</p>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Your search for <span class="emphasis">{{ filter_terms
+        }}</span> found <span class="emphasis">{{ total_results }}</span> out of
+        <span class="emphasis">{{ total_resources }}</span> results</h3>
+      </div>
+      <div class="panel-body">
+        <p>Resources are listed below in alphabetical order by program-planning
+        step (see the Program planning page for more information on the
+        steps).</p>
+      </div>
     </div>
   {% endif %}
   {% if exposed %}
