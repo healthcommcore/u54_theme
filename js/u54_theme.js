@@ -45,6 +45,20 @@
       $('#home-hero-img-overlay').animate({ "opacity" : 0 }, 300);
     });
 
+    $('.filter-topic-button').on('click', function (e) {
+      var span = getSpan(e);
+      if ( $(span).hasClass('glyphicon-menu-right') ) {
+        $(span).removeClass('glyphicon-menu-right').addClass('glyphicon-menu-down');
+      }
+      else {
+        $(span).removeClass('glyphicon-menu-down').addClass('glyphicon-menu-right');
+      }
+    });
+    
+    function getSpan(e) {
+      return ( e.target.localName == "span" ? e.target : e.target.firstChild );
+    }
+
 
 
 
