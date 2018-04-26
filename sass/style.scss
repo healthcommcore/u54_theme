@@ -79,6 +79,7 @@ body {
   color: $dk-blue;
   text-transform: uppercase;
   border-bottom: #fff 1px solid;
+  text-decoration: none;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -263,14 +264,19 @@ body {
     float: none;
   }
   .nav > li > a {
-    color: $accent;
+    color: $dk-blue;
     font-size: 1.4em;
     font-weight: $med;
+    text-decoration: none;
+    line-height: 1.3em;
   }
   .nav > li > a:hover,
   .nav > li > a:focus,
   .nav > li > a.is-active {
     background: none;
+    text-decoration: underline;
+  }
+  .nav > li > a.is-active {
     font-weight: $semi;
   }
 }
@@ -291,10 +297,6 @@ body {
 
 a, strong {
   font-style: normal;
-}
-
-a {
-  font-weight: $semi;
 }
 
 strong {
@@ -326,15 +328,36 @@ h1.page-header {
 h2,
 .view-steps h3,
 .view-resource-search h3 {
-  font-weight: $semi;
-  font-size: 1.7em;
+  font-weight: $med;
+  font-size: 1.5em;
   letter-spacing: 0.01em;
   text-transform: uppercase;
   color: $green;
 }
 
+.resource-page {
+  h2 {
+    text-transform: none;
+    margin-bottom: 30px;
+  }
+  .resource-link {
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+}
+
 a {
   color: $dk-blue;
+  text-decoration: underline;
+  font-weight: $semi;
+}
+
+a:hover, a:focus {
+  color: #000;
+}
+
+a.btn {
+  text-decoration: none;
 }
 
 .btn {
@@ -362,6 +385,12 @@ a {
   background: $dk-blue;
 }
 
+.btn-group {
+  .btn-primary {
+    border: $dk-blue 1px solid;
+  }
+}
+
 .btn-default {
   color: $dk-blue;
   background: #fff;
@@ -370,7 +399,7 @@ a {
 
 .btn-default:hover,
 .btn-default:focus {
-  color: $btn-med-blue;
+  color: #000;
   background: #fff;
   border-color: $dk-blue;
 }
@@ -433,9 +462,10 @@ a {
     display: block;
   }
 
-  button.form-submit {
+  button.form-submit.btn {
     margin-top: 20px;
     width: 100%;
+    font-size: 1.3em;
   }
 }
 
@@ -515,6 +545,95 @@ a {
   font-size: 1.3em;
   line-height: 1.4em;
   margin-bottom: 16px;
+}
+
+.view-resource-search {
+  .first-line {
+    a.smaller {
+      font-size: 0.8em;
+      font-family: $open-sans;
+    }
+  }
+}
+
+
+
+.view-resource-search {
+  .panel-default {
+    .panel-heading {
+      h3.panel-title {
+        font-size: 1.3em;
+        padding-top: 0;
+      }
+
+      span.emphasis {
+        font-weight: $semi;
+        font-size: 1.2em;
+      }
+    }
+  }
+  .panel-heading {
+    h3.panel-title {
+      font-family: $open-sans;
+      text-transform: none;
+      font-weight: $lt;
+      color: #fff;
+    }
+  }
+}
+.panel {
+  border-radius: 0;
+  margin-bottom: 30px;
+  .panel-heading {
+    border-radius: 0;
+  }
+  .panel-title,
+  .panel-body {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .panel-body {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+}
+
+.panel-default {
+  border-color: $med-blue;
+  border-width: 8px;
+  .panel-heading {
+    background: $med-blue;
+  }
+}
+
+.panel-explanation {
+  border: none;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  .panel-heading {
+    background: $med-blue;
+    .panel-title {
+      padding-top: 10px;
+      font-size: 1.2em;
+    }
+  }
+  .panel-body {
+    background: $lter-blue;
+    font-size: 0.9em;
+    h4 {
+      font-size: 1.3em;
+      font-weight: $semi;
+      color: #555;
+      margin: 20px 0 30px;
+    }
+    h4:last-of-type {
+      margin-top: 50px;
+    }
+    img {
+      display: block;
+      margin: 20px auto;
+    }
+  }
 }
 
 .absolute {

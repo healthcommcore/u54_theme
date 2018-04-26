@@ -20,6 +20,8 @@
 {% if title %}
   {% if is_front %}
     <h2{{ title_attributes.addClass('home-header') }}>{{ title }}</h2>
+  {% elseif is_resource %}
+    <h1{{ title_attributes.addClass('page-header') }}>Search results</h1>
   {% else %}
     <h1{{ title_attributes.addClass('page-header') }}>{{ title }}</h1>
   {% endif %}
