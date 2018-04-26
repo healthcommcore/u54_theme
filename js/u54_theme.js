@@ -10,6 +10,7 @@
 
     var form = $('#views-exposed-form-resource-search-page-1');
     var checkboxes = form.find('input[type="checkbox"]');
+    var clearButton = form.find('input[type="submit"]');
 
     // When Resource Finder page loads either from first entering or
     // upon filter form submission, determine if any checkboxes are checked
@@ -28,12 +29,10 @@
     // Check to make sure at least one of the filter category checkboxes were
     // checked. If not, do nothing and display warning
     form.on('submit', function (e) {
-      //console.log(e.originalEvent.explicitOriginalTarget.id);
-      if (e.originalEvent.explicitOriginalTarget.id != "edit-reset" && isEmpty(checkboxes) ) {
+      if ( clearButton.length === 0 && isEmpty(checkboxes) ) {
         $('#alert-modal').modal('show');
-        e.preventDefault();
+        return false;
       }
-
     });
 
     // Hero image fade when hero buttons are hovered over
@@ -45,6 +44,7 @@
       $('#home-hero-img-overlay').animate({ "opacity" : 0 }, 300);
     });
 
+    // Filter category item arrow toggling between right and down when clicked
     $('.filter-topic-button').on('click', function (e) {
       var span = getSpan(e);
       if ( $(span).hasClass('glyphicon-menu-right') ) {
@@ -55,12 +55,11 @@
       }
     });
     
+    // For filter category toggle. Return appropriate element based on click
+    // target
     function getSpan(e) {
       return ( e.target.localName == "span" ? e.target : e.target.firstChild );
     }
-
-
-
 
     // Iterate through all filter category checkboxes to see if any of them are checked
     function isEmpty(checkboxes) {
