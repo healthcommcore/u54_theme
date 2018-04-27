@@ -36,6 +36,10 @@ function u54_theme_preprocess_node__resource(&$vars) {
   $vars["resource_url"] = $vars["node"]->get("field_url")->value; 
 }
 
+function u54_theme_preprocess_item_list(&$vars) {
+  $vars["is_search"] = ($vars["context"]["plugin"] == "node_search");
+}
+
 /**
  * Implements hook_preprocess_views_view()
  *

@@ -335,9 +335,6 @@ h1.page-header {
   margin-bottom: 50px;
 }
 
-h2 {
-}
-
 h2,
 .view-steps h3,
 .view-resource-search h3 {
@@ -359,6 +356,16 @@ h2,
     margin-bottom: 10px;
     display: inline-block;
   }
+}
+
+h3 {
+  color: $green;
+  margin-bottom: 2px;
+  font-weight: $lt;
+}
+
+.space-before-list {
+  margin-bottom: 16px;
 }
 
 a {
@@ -559,6 +566,11 @@ a.btn {
   .views-row {
     margin-bottom: 30px;
   }
+  .view-header {
+    article {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .views-row {
@@ -582,6 +594,20 @@ a.btn {
   }
 }
 
+.panel-default {
+  h3.panel-title {
+    font-family: $open-sans;
+    font-size: 1.3em;
+    text-transform: none;
+    font-weight: $lt;
+    color: #fff;
+  }
+}
+
+.panel-default.panel-search-results {
+  margin: 20px 0 40px;
+}
+    
 
 
 .view-resource-search {
