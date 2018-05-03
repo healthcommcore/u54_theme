@@ -36,6 +36,7 @@
     });
 
     // Hero image fade when hero buttons are hovered over
+/*
     $('.home-btn')
       .on('mouseover', function (e) {
         $('#home-hero-img-overlay').animate({ "opacity" : 0.6 }, 300);
@@ -43,6 +44,7 @@
     .on('mouseout', function (e) {
       $('#home-hero-img-overlay').animate({ "opacity" : 0 }, 300);
     });
+*/
 
     // Filter category item arrow toggling between right and down when clicked
     $('.filter-topic-button').on('click', function (e) {

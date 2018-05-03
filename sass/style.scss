@@ -213,7 +213,8 @@ body {
         line-height: 1.2em;
         color: $dk-blue;
         width: 414px;
-        background: rgba(240, 209, 103, 0.9);
+        //background: rgba(240, 209, 103, 0.9);
+        background: $yellow;
         padding: 18px 20px 20px 20px;
       }
     }
@@ -223,7 +224,7 @@ body {
   }
   .home-hero-title {
     z-index: 100;
-    background: rgba(255, 239, 173, 0.9);
+    background: rgba(240, 209, 103, 0.9);
     text-align: center;
     width: 100%;
     bottom: 0;
@@ -692,6 +693,10 @@ a.btn {
       margin: 20px auto;
     }
   }
+}
+
+figure {
+  margin-bottom: 20px;
 }
 
 summary::-webkit-details-marker {
