@@ -96,16 +96,3 @@ function getFilterTerms($view) {
   return $terms;
 }
 
-/**
- * Implements hook_preprocess_views_view_unformatted()
- *
- * Used to grab the grouping title for views using the 
- * unformatted option and grouped by taxonomy terms
- */
-
-function u54_theme_preprocess_views_view_unformatted(&$view) {
-  $raw_title = $view["title"];
-  $title = explode("\n", $raw_title);
-  $title = strtolower( str_replace(" ", "-", $title[5]) );
-  $view["category_id"] = $title;
-}
