@@ -780,6 +780,16 @@ summary::-webkit-details-marker {
     margin: 0 3px;
   }
 
+  .submenu {
+    margin-top: 6px;
+    ul {
+      margin-left: 0;
+    }
+    .nav > li > a {
+      font-size: 1.25em;
+    }
+  }
+
   .home-hero-container {
     margin-bottom: 5px;
     .buttons-container {
@@ -812,6 +822,72 @@ summary::-webkit-details-marker {
       h1 {
         font-size: 2.0em;
         padding: 14px 0 25px;
+      }
+    }
+  }
+  .main-content {
+    font-size: 1.12em;
+    padding-left: 26px;
+  }
+
+  h1.page-header {
+    font-size: 2.7em;
+    margin-bottom: 40px;
+  }
+
+  h2,
+  .view-steps h3,
+  .view-resource-search h3 {
+    font-size: 1.4em;
+    margin-bottom: 3px;
+    margin-top: 25px;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  .filter-categories {
+    details.form-item {
+      padding-left: 16px;
+    }
+    summary {
+      font-size: 1.2em;
+    }
+    .form-checkboxes {
+      font-size: 0.95em;
+    }
+    button.form-submit.btn {
+      font-size: 1.2em;
+    }
+  }
+  .view-resource-search {
+    .panel-default {
+      .panel-heading {
+        h3.panel-title {
+          font-size: 1.2em;
+        }
+        span.emphasis {
+          font-size: 1.1em;
+        }
+      }
+    }
+    .panel-heading {
+      padding: 6px 15px 10px;
+    }
+  }
+
+  .first-line {
+    font-size: 1.25em;
+    line-height: 1.35em;
+  }
+
+  .footer-content {
+    nav {
+      margin-bottom: 0;
+      ul {
+        margin-left: 0;
+        padding-left: 0;
       }
     }
   }
