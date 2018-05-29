@@ -895,6 +895,163 @@ summary::-webkit-details-marker {
 }
 
 @media (max-width: 991px) {
+  .banner {
+    border-top-width: 8px;
+  }
+  .logo.navbar-btn {
+    margin-top: -10px;
+  }
+  .search-form {
+    .input-group {
+      margin-top: 4px;
+    }
+  }
+  .navbar-stripe {
+    height: 14px;
+    margin-top: 16px;
+  }
+
+  .navbar-size {
+    height: 60px;
+  }
+
+  .navbar-default {
+    .navbar-collapse {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .navbar-default .navbar-nav > li > a {
+    font-size: 0.72em;
+    padding: 14px 7px 2px 7px;
+    margin: 0 3px;
+  }
+
+  .submenu {
+    margin-top: 6px;
+    ul {
+      margin-left: 0;
+    }
+    .nav > li > a {
+      font-size: 1.25em;
+    }
+  }
+
+  .home-hero-container {
+    margin-bottom: 5px;
+    .buttons-container {
+      width: 250px;
+      height: 316px;
+    }
+    .buttons-list {
+      margin-top: 22px;
+      margin-left: 24px;
+      li {
+        margin: 20px 0;
+      }
+      li .hover-text-container {
+      }
+      li:hover .hover-text-container {
+        width: 320px;
+      }
+      .hover-text-container {
+        margin-top: -10px;
+        .hover-rule {
+          width: 70px;
+        }
+        .hover-text-text {
+          font-size: 0.92em;
+          width: 320px;
+        }
+      }
+      .hover-text-container.three-line {
+        margin-top: -20px;
+      }
+      .home-btn {
+        width: 200px;
+        min-height: 54px;
+        font-size: 0.9em;
+      }
+      .home-btn.one-line {
+        padding-top: 18px;
+      }
+    }
+    .home-hero-title {
+      h1 {
+        font-size: 1.7em;
+        padding: 2px 0 16px;
+      }
+    }
+  }
+  .main-content {
+    font-size: 1.12em;
+    padding-left: 26px;
+  }
+
+  h1.page-header {
+    font-size: 2.7em;
+    margin-bottom: 40px;
+  }
+
+  h2,
+  .view-steps h3,
+  .view-resource-search h3 {
+    font-size: 1.4em;
+    margin-bottom: 3px;
+    margin-top: 25px;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  .filter-categories {
+    details.form-item {
+      padding-left: 16px;
+    }
+    summary {
+      font-size: 1.2em;
+    }
+    .form-checkboxes {
+      font-size: 0.95em;
+    }
+    button.form-submit.btn {
+      font-size: 1.2em;
+    }
+  }
+  .view-resource-search {
+    .panel-default {
+      .panel-heading {
+        h3.panel-title {
+          font-size: 1.2em;
+        }
+        span.emphasis {
+          font-size: 1.1em;
+        }
+      }
+    }
+    .panel-heading {
+      padding: 6px 15px 10px;
+    }
+  }
+
+  .first-line {
+    font-size: 1.25em;
+    line-height: 1.35em;
+  }
+
+  .footer-content {
+    nav {
+      margin-bottom: 0;
+      ul {
+        margin-left: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
+
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
