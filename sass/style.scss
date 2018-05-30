@@ -920,12 +920,22 @@ summary::-webkit-details-marker {
       padding-left: 0;
       padding-right: 0;
     }
+    .navbar-nav > li > a {
+      font-size: 0.72em;
+      padding: 14px 7px 2px 7px;
+      margin: 0 3px;
+    }
+    .navbar-nav {
+      .dropdown-menu > li > a {
+        font-size: 0.85em;
+      }
+    }
   }
 
-  .navbar-default .navbar-nav > li > a {
-    font-size: 0.72em;
-    padding: 14px 7px 2px 7px;
-    margin: 0 3px;
+  .home-header {
+    span {
+      left: 98px;
+    }
   }
 
   .submenu {
@@ -934,7 +944,7 @@ summary::-webkit-details-marker {
       margin-left: 0;
     }
     .nav > li > a {
-      font-size: 1.25em;
+      font-size: 1.0em;
     }
   }
 
@@ -984,20 +994,23 @@ summary::-webkit-details-marker {
       }
     }
   }
+  .main-container {
+    padding-top: 20px;
+  }
   .main-content {
-    font-size: 1.12em;
-    padding-left: 26px;
+    font-size: 1.05em;
+    padding-left: 12px;
   }
 
   h1.page-header {
-    font-size: 2.7em;
-    margin-bottom: 40px;
+    font-size: 2.4em;
+    margin-bottom: 30px;
   }
 
   h2,
   .view-steps h3,
   .view-resource-search h3 {
-    font-size: 1.4em;
+    font-size: 1.2em;
     margin-bottom: 3px;
     margin-top: 25px;
   }
@@ -1008,16 +1021,30 @@ summary::-webkit-details-marker {
 
   .filter-categories {
     details.form-item {
-      padding-left: 16px;
+      padding-left: 10px;
+      padding-right: 15px;
     }
     summary {
-      font-size: 1.2em;
+      font-size: 1.0em;
+      margin-left: 15px;
+      .glyphicon {
+        margin-left: -20px;
+        padding-right: 2px;
+      }
     }
     .form-checkboxes {
-      font-size: 0.95em;
+      line-height: 1.3em;
+      font-size: 0.85em;
+      margin-left: 30px;
+      ul {
+        margin-left: 0px;
+        ul {
+          margin-left: 18px;
+        }
+      }
     }
     button.form-submit.btn {
-      font-size: 1.2em;
+      font-size: 1.0em;
     }
   }
   .view-resource-search {
@@ -1032,12 +1059,12 @@ summary::-webkit-details-marker {
       }
     }
     .panel-heading {
-      padding: 6px 15px 10px;
+      padding: 6px 15px 8px;
     }
   }
 
   .first-line {
-    font-size: 1.25em;
+    font-size: 1.18em;
     line-height: 1.35em;
   }
 
