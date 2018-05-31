@@ -895,26 +895,6 @@ summary::-webkit-details-marker {
 }
 
 @media (max-width: 991px) {
-  .banner {
-    border-top-width: 8px;
-  }
-  .logo.navbar-btn {
-    margin-top: -10px;
-  }
-  .search-form {
-    .input-group {
-      margin-top: 4px;
-    }
-  }
-  .navbar-stripe {
-    height: 14px;
-    margin-top: 16px;
-  }
-
-  .navbar-size {
-    height: 60px;
-  }
-
   .navbar-default {
     .navbar-collapse {
       padding-left: 0;
@@ -1082,7 +1062,57 @@ summary::-webkit-details-marker {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .search-form {
+    .input-group {
+      margin-top: 4px;
+    }
+  }
+  .banner {
+    border-top-width: 8px;
+  }
+  .logo.navbar-btn {
+    margin-top: -10px;
+  }
+  .navbar-size {
+    height: 60px;
+  }
+
+  .navbar-stripe {
+    height: 14px;
+    margin-top: 16px;
+  }
 }
 
 @media (max-width: 767px) {
+  .search-form {
+    .input-group {
+      margin: 6px 0;
+    }
+  }
+  .banner {
+    border-top-width: 5px;
+  }
+  .logo.navbar-btn {
+    margin-top: -8px;
+  }
+  .navbar-stripe {
+    background: #fff;
+    margin-top: 16px;
+  }
+  .navbar-size {
+    height: 46px;
+  }
+
+  .navbar-header {
+    border-top: #ddd 1px solid;
+    border-bottom: #ddd 1px solid;
+  }
+  .navbar-toggle {
+    padding: 8px;
+  }
+  .navbar.navbar-default {
+    z-index: 999;
+  }
+
+
 }
