@@ -1128,6 +1128,40 @@ summary::-webkit-details-marker {
     }
     .navbar-nav > li.expanded.open .dropdown-menu {
       display: block;
+      z-index: 200;
+    }
+  }
+  .home-hero-container {
+    .home-hero-img-container {
+      position: absolute;
+      top: 0;
+    }
+    .buttons-container.absolute {
+      position: relative;
+    }
+    .buttons-container {
+      width: 100%;
+      text-align: center;
+      background: none;
+      padding-top: 75%;
+      margin-bottom: 75%;
+      .buttons-list {
+        display: inline-block;
+        margin: 0;
+        li:hover .hover-text-container {
+          display: none;
+        }
+      }
+    }
+    .home-hero-title {
+      top: 0;
+      margin-top: 54%;
+      bottom: initial;
+      h1 {
+        padding: 0 5px;
+        font-size: 1.3em;
+        margin: 10px 0 12px 0;
+      }
     }
   }
 }
