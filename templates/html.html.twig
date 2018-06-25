@@ -62,6 +62,18 @@
     <css-placeholder token="{{ placeholder_token|raw }}">
     <js-placeholder token="{{ placeholder_token|raw }}">
     <link rel="stylesheet" href="https://use.typekit.net/aqi7ktf.css">
+
+    <!-- Google Analytics -->
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var pageTracker = _gat._getTracker("UA-12012144-1");
+            pageTracker._trackPageview();
+        } catch(err) {}
+    </script>
   </head>
   <body{{ attributes.addClass(body_classes) }}>
     <a href="#main-content" class="visually-hidden focusable skip-link">
