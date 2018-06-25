@@ -1,9 +1,6 @@
 // Default variables.
 //@import "default-variables";
 
-// Bootstrap Framework.
-//@import '../bootstrap/assets/stylesheets/bootstrap';
-
 // Base-theme overrides.
 //@import 'overrides';
 
@@ -86,10 +83,6 @@ body {
   font-size: 1.0em;
 }
 
-.navbar-default .navbar-nav > li > a:hover, 
-.navbar-default .navbar-nav > li > a:focus {
-}
-
 .navbar-default .navbar-nav > li > a,
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li.active > a,
@@ -102,13 +95,6 @@ body {
 
 .navbar-default .navbar-nav > li > a {
   padding-bottom: 8px;
-}
-
-.navbar-default .navbar-nav > li.active > a,
-.navbar-default .navbar-nav > li > a.is-active {
-  //font-family: $navlink-active-font;
-  //border-top: #fff 11px solid;
-  //border-bottom: $orange 4px solid;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
@@ -284,6 +270,11 @@ body {
   }
 }
 
+.left-col-shim {
+  height: 14px;
+  background: $yellow;
+}
+
 .main-bkgrd {
   background: #fff;
 }
@@ -435,7 +426,6 @@ a.btn {
 }
 
 .filter-categories {
-  border-top: $yellow 14px solid;
   details.form-item {
     background: $lt-cream;
     padding: 10px 20px 10px 20px;
@@ -895,43 +885,12 @@ summary::-webkit-details-marker {
 }
 
 @media (max-width: 991px) {
-  .banner {
-    border-top-width: 8px;
-  }
-  .logo.navbar-btn {
-    margin-top: -10px;
-  }
-  .search-form {
-    .input-group {
-      margin-top: 4px;
-    }
-  }
-  .navbar-stripe {
-    height: 14px;
-    margin-top: 16px;
-  }
-
-  .navbar-size {
-    height: 60px;
-  }
-
   .navbar-default {
     .navbar-collapse {
       padding-left: 0;
       padding-right: 0;
     }
-    .navbar-nav > li > a {
-      font-size: 0.72em;
-      padding: 14px 7px 2px 7px;
-      margin: 0 3px;
-    }
-    .navbar-nav {
-      .dropdown-menu > li > a {
-        font-size: 0.85em;
-      }
-    }
-  }
-
+  } 
   .home-header {
     span {
       left: 98px;
@@ -1082,7 +1041,128 @@ summary::-webkit-details-marker {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .search-form {
+    .input-group {
+      margin-top: 4px;
+    }
+  }
+  .banner {
+    border-top-width: 8px;
+  }
+  .logo.navbar-btn {
+    margin-top: -10px;
+  }
+  .navbar-size {
+    height: 60px;
+  }
+
+  .navbar-stripe {
+    height: 14px;
+    margin-top: 16px;
+  }
+  .navbar-default {
+    .navbar-nav > li > a {
+      font-size: 0.72em;
+      padding: 14px 7px 2px 7px;
+      margin: 0 3px;
+    }
+    .navbar-nav {
+      .dropdown-menu > li > a {
+        font-size: 0.85em;
+      }
+    }
+  }
+
 }
 
 @media (max-width: 767px) {
+  .search-form {
+    .input-group {
+      margin: 6px 0;
+    }
+  }
+  .banner {
+    border-top-width: 5px;
+  }
+  .logo.navbar-btn {
+    margin-top: -8px;
+  }
+  .navbar-stripe {
+    background: #fff;
+    margin-top: 16px;
+  }
+  .navbar-size {
+    height: 46px;
+  }
+
+  .navbar-header {
+    border-top: #ddd 1px solid;
+    border-bottom: #ddd 1px solid;
+  }
+  .navbar-toggle {
+    padding: 8px;
+  }
+  .navbar.navbar-default {
+    z-index: 999;
+  }
+
+  .navbar-default {
+    .navbar-nav {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+    .navbar-nav > li > a {
+      font-size: 0.8em;
+    }
+    .navbar-nav > li > a,
+    .navbar-nav .dropdown-menu > li > a,
+    .navbar-nav > li > a:hover,
+    .navbar-nav > li > a.active,
+    .navbar-nav > li.active > a,
+    .navbar-nav > li > a.is-active,
+    .navbar-nav > li.active-trail a.active-trail,
+    .navbar-nav > li > a:focus {
+      border: none;
+    }
+    .navbar-nav > li.expanded:hover .dropdown-menu {
+      display: none;
+    }
+    .navbar-nav > li.expanded.open .dropdown-menu {
+      display: block;
+      z-index: 200;
+    }
+  }
+  .home-hero-container {
+    .home-hero-img-container {
+      position: absolute;
+      top: 0;
+    }
+    .buttons-container.absolute {
+      position: relative;
+    }
+    .buttons-container {
+      width: 100%;
+      text-align: center;
+      background: none;
+      padding-top: 75%;
+      margin-bottom: 75%;
+      .buttons-list {
+        display: inline-block;
+        margin: 0;
+        li:hover .hover-text-container {
+          display: none;
+        }
+      }
+    }
+    .home-hero-title {
+      top: 0;
+      margin-top: 54%;
+      bottom: initial;
+      h1 {
+        padding: 0 5px;
+        font-size: 1.3em;
+        margin: 10px 0 12px 0;
+      }
+    }
+  }
 }
