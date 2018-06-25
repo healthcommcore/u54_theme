@@ -1,9 +1,6 @@
 // Default variables.
 //@import "default-variables";
 
-// Bootstrap Framework.
-//@import '../bootstrap/assets/stylesheets/bootstrap';
-
 // Base-theme overrides.
 //@import 'overrides';
 
@@ -273,6 +270,11 @@ body {
   }
 }
 
+.left-col-shim {
+  height: 14px;
+  background: $yellow;
+}
+
 .main-bkgrd {
   background: #fff;
 }
@@ -424,7 +426,6 @@ a.btn {
 }
 
 .filter-categories {
-  border-top: $yellow 14px solid;
   details.form-item {
     background: $lt-cream;
     padding: 10px 20px 10px 20px;
