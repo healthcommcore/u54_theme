@@ -11,6 +11,8 @@
     var form = $('#views-exposed-form-resource-search-page-1');
     var checkboxes = form.find('input[type="checkbox"]');
     var clearButton = form.find('input[type="submit"]');
+    var showAll = $('#show-all-resources');
+    var resourcesShowing = false;
 
     // When Resource Finder page loads either from first entering or
     // upon filter form submission, determine if any checkboxes are checked
@@ -19,11 +21,13 @@
       $('#filter-explanation').removeClass('show').addClass('hidden');
       $('#search-results').removeClass('hidden').addClass('show');
       $('.view-resource-search .view-content').removeClass('hidden').addClass('show');
+      showAll.removeClass('show').addClass('hidden');
     }
     else {
       $('#filter-explanation').removeClass('hidden').addClass('show');
       $('#search-results').removeClass('show').addClass('hidden');
       $('.view-resource-search .view-content').removeClass('show').addClass('hidden');
+      showAll.removeClass('hidden').addClass('show');
     }
 
     // Check to make sure at least one of the filter category checkboxes were
@@ -33,6 +37,23 @@
         $('#alert-modal').modal('show');
         return false;
       }
+    });
+
+    showAll.on('click', function (e) {
+      if (resourcesShowing) {
+        $('#filter-explanation').removeClass('hidden').addClass('show');
+        $('.view-resource-search .view-content').removeClass('show').addClass('hidden');
+        showAll.html("Show all resources");
+        resourcesShowing = false;
+      }
+      else {
+        $('#filter-explanation').removeClass('show').addClass('hidden');
+        $('.view-resource-search .view-content').removeClass('hidden').addClass('show');
+        showAll.html("Hide all resources");
+        resourcesShowing = true;
+      }
+      //console.log();
+      e.preventDefault();
     });
 
     // Hero image fade when hero buttons are hovered over
