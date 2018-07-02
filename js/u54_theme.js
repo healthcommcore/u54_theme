@@ -13,6 +13,7 @@
     var clearButton = form.find('input[type="submit"]');
     var showAll = $('#show-all-resources');
     var resourcesShowing = false;
+    var submenuToggle = $('.dropdown .dropdown-toggle');
 
     // When Resource Finder page loads either from first entering or
     // upon filter form submission, determine if any checkboxes are checked
@@ -55,6 +56,30 @@
       //console.log();
       e.preventDefault();
     });
+
+    submenuToggle.on('click', function(e) {
+      //console.log( $(this) );
+      var span = getClickedSpan( $(this) );
+      var arrowClass = "glyphicon-triangle-";
+      if ( span.hasClass(arrowClass + 'right') ) {
+        span.removeClass(arrowClass + 'right').addClass(arrowClass + 'bottom');
+      }
+      else {
+        span.removeClass(arrowClass + 'bottom').addClass(arrowClass + 'right');
+      }
+    });
+
+    function getClickedSpan(clicked) {
+      if ( clicked.hasClass('glyphicon') ) {
+        return clicked;
+      }
+      else if ( clicked.find('span').hasClass('glyphicon') ) {
+        return clicked.find('span');
+      }
+      else {
+        console.log("ERROR!");
+      }
+    }
 
     // Hero image fade when hero buttons are hovered over
 /*

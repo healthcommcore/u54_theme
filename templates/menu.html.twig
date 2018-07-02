@@ -34,10 +34,11 @@
       %}
       {% if menu_level == 0 and item.is_expanded %}
         <li{{ item.attributes.addClass(item_classes) }}>
-        <a class="visible-xs dropdown-toggle" data-toggle="dropdown">
+        <a class="visible-xs dropdown-toggle pull-left" data-toggle="dropdown">
           <span class="glyphicon glyphicon-triangle-right"></span>
         </a>
-        <a href="{{ item.url }}">{{ item.title }}</a>
+        <a class="pull-left dropdown-toggle-menu-item" href="{{ item.url }}">{{ item.title }}</a>
+        <span class="visible-xs clear-float"></span>
       {% else %}
         <li{{ item.attributes.addClass(item_classes) }}>
         {{ link(item.title, item.url) }}
