@@ -962,11 +962,6 @@ summary::-webkit-details-marker {
     padding-left: 12px;
   }
 
-  h1.page-header {
-    font-size: 2.4em;
-    margin-bottom: 30px;
-  }
-
   h2,
   .view-steps h3,
   .view-resource-search h3 {
@@ -1023,11 +1018,6 @@ summary::-webkit-details-marker {
     }
   }
 
-  .first-line {
-    font-size: 1.18em;
-    line-height: 1.35em;
-  }
-
   .footer-content {
     nav {
       margin-bottom: 0;
@@ -1073,6 +1063,16 @@ summary::-webkit-details-marker {
       }
     }
   }
+  h1.page-header {
+    font-size: 2.4em;
+    margin-bottom: 30px;
+  }
+
+  .first-line {
+    font-size: 1.18em;
+    line-height: 1.35em;
+  }
+
 
 }
 
@@ -1206,6 +1206,34 @@ summary::-webkit-details-marker {
       }
     }
   }
+  h1.page-header {
+    font-size: 2.0em;
+    margin-bottom: 16px;
+  }
+  h2,
+  .view-steps h3,
+  .view-resource-search h3 {
+    margin-top: 20px;
+  }
+
+  .view-header {
+    article {
+      margin-bottom: 30px;
+    }
+    .btn-group .btn:first-child {
+      margin-bottom: 12px;
+    }
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .first-line {
+    font-size: 1.15em;
+  }
+
+
   .footer-logos {
     img {
       margin-bottom: 25px;
