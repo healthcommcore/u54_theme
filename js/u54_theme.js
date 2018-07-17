@@ -11,6 +11,9 @@
     var form = $('#views-exposed-form-resource-search-page-1');
     var checkboxes = form.find('input[type="checkbox"]');
     var clearButton = form.find('input[type="submit"]');
+    var showAll = $('#show-all-resources');
+    var resourcesShowing = false;
+    var submenuToggle = $('.dropdown .dropdown-toggle');
 
     // When Resource Finder page loads either from first entering or
     // upon filter form submission, determine if any checkboxes are checked
@@ -19,11 +22,13 @@
       $('#filter-explanation').removeClass('show').addClass('hidden');
       $('#search-results').removeClass('hidden').addClass('show');
       $('.view-resource-search .view-content').removeClass('hidden').addClass('show');
+      showAll.removeClass('show').addClass('hidden');
     }
     else {
       $('#filter-explanation').removeClass('hidden').addClass('show');
       $('#search-results').removeClass('show').addClass('hidden');
       $('.view-resource-search .view-content').removeClass('show').addClass('hidden');
+      showAll.removeClass('hidden').addClass('show');
     }
 
     // Check to make sure at least one of the filter category checkboxes were
@@ -34,6 +39,47 @@
         return false;
       }
     });
+
+    showAll.on('click', function (e) {
+      if (resourcesShowing) {
+        $('#filter-explanation').removeClass('hidden').addClass('show');
+        $('.view-resource-search .view-content').removeClass('show').addClass('hidden');
+        showAll.html("Show all resources");
+        resourcesShowing = false;
+      }
+      else {
+        $('#filter-explanation').removeClass('show').addClass('hidden');
+        $('.view-resource-search .view-content').removeClass('hidden').addClass('show');
+        showAll.html("Hide all resources");
+        resourcesShowing = true;
+      }
+      //console.log();
+      e.preventDefault();
+    });
+
+    submenuToggle.on('click', function(e) {
+      //console.log( $(this) );
+      var span = getClickedSpan( $(this) );
+      var arrowClass = "glyphicon-triangle-";
+      if ( span.hasClass(arrowClass + 'right') ) {
+        span.removeClass(arrowClass + 'right').addClass(arrowClass + 'bottom');
+      }
+      else {
+        span.removeClass(arrowClass + 'bottom').addClass(arrowClass + 'right');
+      }
+    });
+
+    function getClickedSpan(clicked) {
+      if ( clicked.hasClass('glyphicon') ) {
+        return clicked;
+      }
+      else if ( clicked.find('span').hasClass('glyphicon') ) {
+        return clicked.find('span');
+      }
+      else {
+        console.log("ERROR!");
+      }
+    }
 
     // Hero image fade when hero buttons are hovered over
 /*

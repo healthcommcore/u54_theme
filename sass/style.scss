@@ -962,11 +962,6 @@ summary::-webkit-details-marker {
     padding-left: 12px;
   }
 
-  h1.page-header {
-    font-size: 2.4em;
-    margin-bottom: 30px;
-  }
-
   h2,
   .view-steps h3,
   .view-resource-search h3 {
@@ -1023,11 +1018,6 @@ summary::-webkit-details-marker {
     }
   }
 
-  .first-line {
-    font-size: 1.18em;
-    line-height: 1.35em;
-  }
-
   .footer-content {
     nav {
       margin-bottom: 0;
@@ -1073,6 +1063,16 @@ summary::-webkit-details-marker {
       }
     }
   }
+  h1.page-header {
+    font-size: 2.4em;
+    margin-bottom: 30px;
+  }
+
+  .first-line {
+    font-size: 1.18em;
+    line-height: 1.35em;
+  }
+
 
 }
 
@@ -1098,7 +1098,7 @@ summary::-webkit-details-marker {
 
   .navbar-header {
     border-top: #ddd 1px solid;
-    border-bottom: #ddd 1px solid;
+    border-bottom: $yellow 5px solid;
   }
   .navbar-toggle {
     padding: 8px;
@@ -1113,7 +1113,7 @@ summary::-webkit-details-marker {
       margin-right: 5px;
     }
     .navbar-nav > li > a {
-      font-size: 0.8em;
+      font-size: 0.9em;
     }
     .navbar-nav > li > a,
     .navbar-nav .dropdown-menu > li > a,
@@ -1125,12 +1125,52 @@ summary::-webkit-details-marker {
     .navbar-nav > li > a:focus {
       border: none;
     }
+    .navbar-nav > li.expanded {
+      display: block;
+      position: relative;
+      .clear-float {
+        clear: both;
+      }
+    }
+    .navbar-nav > li.expanded.open .dropdown-menu {
+      width: 100%;
+    }
+    .navbar-nav > li.expanded .dropdown-menu,
+    .navbar-nav > li.expanded:hover .dropdown-menu {
+      border-top: $dk-blue 1px solid;
+      border-bottom: $dk-blue 1px solid;
+      border-left: none;
+      border-right: none;
+      border-radius: 0;
+    }
+    .navbar-nav > li.expanded a.dropdown-toggle-menu-item {
+      padding-left: 0;
+    }
+    .navbar-nav > li.expanded a.dropdown-toggle {
+      cursor: pointer;
+      padding-right: 8px;
+    }
     .navbar-nav > li.expanded:hover .dropdown-menu {
       display: none;
     }
     .navbar-nav > li.expanded.open .dropdown-menu {
       display: block;
       z-index: 200;
+      background: #f0f0f0;
+    }
+    .navbar-nav > .open > a,
+    .navbar-nav > .open > a:hover,
+    .navbar-nav > .open > a:focus {
+      background: none;
+      color: $dk-blue;
+    }
+    .navbar-nav {
+      .dropdown-menu > li > a {
+        text-transform: none;
+      }
+    }
+    .navbar-collapse {
+      border-bottom: $yellow 5px solid;
     }
   }
   .home-hero-container {
@@ -1164,6 +1204,43 @@ summary::-webkit-details-marker {
         font-size: 1.3em;
         margin: 10px 0 12px 0;
       }
+    }
+  }
+  h1.page-header {
+    font-size: 2.0em;
+    margin-bottom: 16px;
+  }
+  h2,
+  .view-steps h3,
+  .view-resource-search h3 {
+    margin-top: 20px;
+  }
+
+  .view-header {
+    article {
+      margin-bottom: 30px;
+    }
+    .btn-group .btn:first-child {
+      margin-bottom: 12px;
+    }
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .first-line {
+    font-size: 1.15em;
+  }
+
+
+  .footer-logos {
+    img {
+      margin-bottom: 25px;
+    }
+    .pmc, .dfhcc {
+      float: none;
+      display: inline-block;
     }
   }
 }
