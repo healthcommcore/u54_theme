@@ -147,7 +147,7 @@
       <div class="row">
 
         {# Header #}
-        {% if page.header %}
+        {% if page.header and not is_front %}
           {% block header %}
             <div class="col-sm-12" role="heading">
               {{ page.header }}
@@ -159,7 +159,7 @@
         {% if page.sidebar_first %}
           {% block sidebar_first %}
             {% if is_front %}
-              <aside class="col-sm-2" role="complementary">
+              <aside class="col-sm-4" role="complementary">
             {% else %}
               <aside class="col-sm-3" role="complementary">
             {% endif %}
@@ -173,7 +173,7 @@
           set content_classes = [
             'main-content',
             page.sidebar_first and page.sidebar_second ? 'col-sm-6',
-            page.sidebar_first and is_front ? 'col-sm-10',
+            page.sidebar_first and is_front ? 'col-sm-8',
             page.sidebar_first and page.sidebar_second is empty ? 'col-sm-9',
             page.sidebar_second and page.sidebar_first is empty ? 'col-sm-9',
             page.sidebar_first is empty and page.sidebar_second is empty ? 'col-sm-12',

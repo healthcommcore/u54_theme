@@ -145,7 +145,7 @@ body {
 
 .home-hero-container {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   .buttons-container {
     background: rgba(20, 79, 136, 0.5);
     width: 386px;
@@ -230,18 +230,53 @@ body {
   }
 }
 
-.home-header {
-  border-bottom: $dk-blue 1px solid;
-  display: block;
-  position: relative;
-  margin-bottom: 40px;
-  span {
-    margin-top: -16px;
-    font-size: 1.1em;
-    position: absolute;
-    background: #fff;
-    left: 205px;
-    padding: 0 25px;
+.path-frontpage {
+  .main-content {
+    padding-bottom: 50px;
+    padding-left: 40px;
+    margin-bottom: 50px;
+    border-left: $dk-blue 1px solid;
+  }
+}
+
+.homepage-testimonial {
+  padding: 20px 30px 0 0;
+  .quote-text {
+    color: $med-blue;
+    font-family: $nudista;
+    font-size: 1.4em;
+    font-weight: $lt;
+  }
+  .quote-img {
+    //margin-bottom: -100px;
+    margin-top: 50px;
+    img {
+    }
+    .img-circular {
+      border-radius: 50%;
+    }
+  }
+  .quote-source {
+    margin-top: -15px;
+    width: 45%;
+    color: $green;
+    font-weight: $lt;
+    font-size: 0.9em;
+  }
+}
+
+.homepage-news {
+  margin-right: 30px;
+  h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    line-height: 1.4em;
+    border-bottom: $dk-blue 1px solid;
+    padding-left: 20px;
+  }
+  p {
+    margin-left: 20px;
+    margin-right: 10px;
   }
 }
 
