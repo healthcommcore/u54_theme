@@ -235,20 +235,24 @@ body {
     padding-bottom: 50px;
     padding-left: 40px;
     margin-bottom: 50px;
-    border-left: $dk-blue 1px solid;
+  }
+  aside {
+    border-right: $dk-blue 1px solid;
   }
 }
 
 .homepage-testimonial {
   padding: 20px 30px 0 0;
   .quote-text {
-    color: $med-blue;
+    color: $testimonial-blue;
     font-family: $nudista;
-    font-size: 1.4em;
+    font-size: 1.5em;
     font-weight: $lt;
+    border-bottom: $dk-blue 1px solid;
+    padding-bottom: 20px;
   }
   .quote-img {
-    //margin-bottom: -100px;
+    margin-left: 15px;
     margin-top: 50px;
     img {
     }
@@ -257,7 +261,6 @@ body {
     }
   }
   .quote-source {
-    margin-top: -15px;
     width: 45%;
     color: $green;
     font-weight: $lt;
@@ -267,16 +270,19 @@ body {
 
 .homepage-news {
   margin-right: 30px;
+  margin-bottom: 50px;
   h2 {
     margin-top: 0;
     margin-bottom: 16px;
     line-height: 1.4em;
     border-bottom: $dk-blue 1px solid;
     padding-left: 20px;
+    font-size: 1.7em;
   }
   p {
     margin-left: 20px;
     margin-right: 10px;
+    line-height: 1.5em;
   }
 }
 
@@ -851,6 +857,11 @@ summary::-webkit-details-marker {
       }
     }
   }
+  .homepage-testimonial {
+    .quote-text {
+      font-size: 1.37em;
+    }
+  }
   .main-content {
     font-size: 1.12em;
     padding-left: 26px;
@@ -1098,6 +1109,28 @@ summary::-webkit-details-marker {
       }
     }
   }
+  .homepage-testimonial {
+    .quote-text {
+      font-size: 1.3em;
+    }
+    .quote-img {
+      margin-top: 10px;
+      width: 40%;
+    }
+    .quote-source {
+      font-size: 0.8em;
+    }
+  }
+  .homepage-news {
+    h2 {
+      font-size: 1.4em;
+      padding-left: 0;
+    }
+    p {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
   h1.page-header {
     font-size: 2.4em;
     margin-bottom: 30px;
@@ -1239,6 +1272,41 @@ summary::-webkit-details-marker {
         font-size: 1.3em;
         margin: 10px 0 12px 0;
       }
+    }
+  }
+  .path-frontpage {
+    .main-content {
+      padding-left: 15px;
+    }
+  }
+  .homepage-testimonial {
+    padding: 0;
+    .quote-text {
+      font-size: 1.3em;
+    }
+    .quote-img {
+      margin-top: 10px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+    .quote-img.pull-right {
+      float: none !important;
+    }
+    .quote-source {
+      font-size: 0.8em;
+      width: 100%;
+    }
+  }
+  .homepage-news {
+    h2 {
+      font-size: 1.4em;
+      padding-left: 0;
+    }
+    p {
+      margin-left: 0;
+      margin-right: 0;
     }
   }
   h1.page-header {
