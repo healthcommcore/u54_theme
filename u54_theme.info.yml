@@ -7,9 +7,6 @@ name: 'U54 Theme'
 description: 'Uses the Bootstrap framework Sass source files and must be compiled (not for beginners).'
 package: 'Bootstrap'
 
-dependencies:
-  - 'core/jquery'
-
 regions:
   banner: 'Banner'
   navigation: 'Navigation'
