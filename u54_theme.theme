@@ -66,7 +66,6 @@ function getNode() {
 }
 
 function getTotalResources() {
-  //$total = db_query("SELECT count(n.nid) FROM {node} AS n, {node_field_data} AS nfd WHERE n.nid = nfd.nid AND n.type='resource' AND nfd.status=1")->fetchField();
   $total = \Drupal::database()->query("SELECT count(n.nid) FROM {node} AS n, {node_field_data} AS nfd WHERE n.nid = nfd.nid AND n.type='resource' AND nfd.status=1")->fetchField();
   return $total;
 }

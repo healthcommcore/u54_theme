@@ -1,3 +1,7 @@
+attributes:
+  dependencies:
+    - core/jquery
+
 global-styling:
   css:
     theme:
@@ -8,21 +12,3 @@ global-scripts:
     js/u54_theme.js: {}
   dependencies:
     - core/jquery
-
-hero-blur:
-  js:
-    js/background-blur.min.js: {}
-bootstrap-scripts:
-  js:
-    bootstrap/assets/javascripts/bootstrap/affix.js: {}
-    bootstrap/assets/javascripts/bootstrap/alert.js: {}
-    bootstrap/assets/javascripts/bootstrap/button.js: {}
-    bootstrap/assets/javascripts/bootstrap/carousel.js: {}
-    bootstrap/assets/javascripts/bootstrap/collapse.js: {}
-    bootstrap/assets/javascripts/bootstrap/dropdown.js: {}
-    bootstrap/assets/javascripts/bootstrap/modal.js: {}
-    bootstrap/assets/javascripts/bootstrap/tooltip.js: {}
-    bootstrap/assets/javascripts/bootstrap/popover.js: {}
-    bootstrap/assets/javascripts/bootstrap/scrollspy.js: {}
-    bootstrap/assets/javascripts/bootstrap/tab.js: {}
-    bootstrap/assets/javascripts/bootstrap/transition.js: {}
